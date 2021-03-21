@@ -6,20 +6,22 @@
 
 <h2>Index</h2>
 
-<table>
-    <tr>
-        <td>Id Marca </td>
-        <td>Nombre Marca </td>
-    </tr>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td width="10%">@Html.LabelFor(p => Model[0].iidRol)</td>
+            <td width="20%">@Html.LabelFor(p => Model[0].nombreR) </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.iidRol </td>
+                <td>@item.nombreR </td>
+            </tr>
+        }
+    </tbody>
 
 </table>
 
-<thead>
-    @foreach (var item in Model)
-    { 
-        <tr>
-            <td>@item.iidRol </td>
-            <td>@item.nombreR </td>
-        </tr>
-    }
-</thead>
