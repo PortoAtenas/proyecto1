@@ -27,6 +27,30 @@ namespace proyecto1.Controllers
             return View(listaRol);
         }
 
+        public ActionResult Agregar() {
+            return View();
+        
+        }
+
+        
+        [HttpPost]
+        public ActionResult Agregar(RolCLS oRolCLS) {
+            if (!ModelState.IsValid)
+            {
+                return View(oRolCLS);
+            }
+            else {
+                using (var bd = new proyectoSEntities1())
+                {
+                    Rol oRol = new Rol();
+                    oRol.nombreR = oRolCLS.nombreR;
+                    bd.Rol.Add(oRol);
+                    bd.SaveChanges();
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
         // GET: Rol/Details/5
         public ActionResult Details(int id)
         {

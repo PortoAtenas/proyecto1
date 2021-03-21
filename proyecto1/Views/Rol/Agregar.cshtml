@@ -1,0 +1,28 @@
+﻿@using proyecto1.Models
+@model RolCLS
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar Rol</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Agregar", "Rol", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(p => p.nombreR)
+                @Html.TextBoxFor(p => p.nombreR, new { @class = "form-control" })
+                @Html.ValidationMessage("nombreR", new { @class="text-danger"})
+            </div>
+
+            <br />
+
+            <div style="margin:auto">
+                <input type="submit" class="btn btn-primary" value="Guardar" />
+            </div>
+        }
+    </div>
+</div>
+
