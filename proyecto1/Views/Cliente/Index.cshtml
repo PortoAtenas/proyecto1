@@ -1,0 +1,35 @@
+﻿@using proyecto1.Models;
+@model List<ClienteCLS>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td width="10%">@Html.LabelFor(p => Model[0].icedula)</td>
+            <td width="20%">@Html.LabelFor(p => Model[0].inombreC)</td>
+            <td width="10%">@Html.LabelFor(p => Model[0].iapellidosC) </td>
+            <td width="10%">@Html.LabelFor(p => Model[0].idireccion) </td>
+            <td width="30%">@Html.LabelFor(p => Model[0].icelular)</td>
+            <td width="10%">@Html.LabelFor(p => Model[0].itelefono)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.icedula </td>
+                <td>@item.inombreC </td>
+                <td>@item.iapellidosC </td>
+                <td>@item.idireccion  </td>
+                <td>@item.icelular</td>
+                <td>@item.itelefono</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
