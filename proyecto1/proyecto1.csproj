@@ -147,6 +147,7 @@
     <Compile Include="Models\Rol.cs">
       <DependentUpon>BDProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\RolCLS.cs" />
     <Compile Include="Models\sysdiagrams.cs">
       <DependentUpon>BDProyecto.tt</DependentUpon>
     </Compile>
