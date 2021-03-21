@@ -1,0 +1,25 @@
+﻿@using proyecto1.Models;
+@model List<RolCLS>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table>
+    <tr>
+        <td>Id Marca </td>
+        <td>Nombre Marca </td>
+    </tr>
+
+</table>
+
+<thead>
+    @foreach (var item in Model)
+    { 
+        <tr>
+            <td>@item.iidRol </td>
+            <td>@item.nombreR </td>
+        </tr>
+    }
+</thead>
