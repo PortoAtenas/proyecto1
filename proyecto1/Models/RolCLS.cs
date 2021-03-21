@@ -11,6 +11,8 @@ namespace proyecto1.Models
         [Display(Name="Id Rol")]
         public int iidRol { get; set; }
 
+        [Required]
+        [StringLength(100,ErrorMessage ="La maxima es 15 caracteres")]
         [Display(Name ="Nombre Rol")]
         public string nombreR { get; set; }
     }

@@ -14,6 +14,7 @@
             <div>
                 @Html.LabelFor(p => p.nombreR)
                 @Html.TextBoxFor(p => p.nombreR, new { @class = "form-control" })
+                @Html.ValidationMessage("nombreR", new { @class="text-danger"})
             </div>
 
             <br />
