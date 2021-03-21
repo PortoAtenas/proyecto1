@@ -13,6 +13,6 @@ namespace proyecto1.Models
 
 
         [Display(Name ="Nombre Rol")]
-        public String nombreR { get; set; }
+        public string nombreR { get; set; }
     }
 }
