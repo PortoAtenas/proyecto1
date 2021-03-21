@@ -12,7 +12,7 @@ namespace proyecto1.Models
         public int iidRol { get; set; }
 
 
-        [Display(Name ="Nombre Rol"])
-        public int nombreR { get; set; }
+        [Display(Name ="Nombre Rol")]
+        public String nombreR { get; set; }
     }
 }
