@@ -11,7 +11,6 @@ namespace proyecto1.Models
         [Display(Name="Id Rol")]
         public int iidRol { get; set; }
 
-
         [Display(Name ="Nombre Rol")]
         public string nombreR { get; set; }
     }

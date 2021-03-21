@@ -27,6 +27,17 @@ namespace proyecto1.Controllers
             return View(listaRol);
         }
 
+        public ActionResult Agregar() {
+            return View();
+        
+        }
+
+        /*
+        [HttpPost]
+        public ActionResult Agregar() {
+            return View();
+        }*/
+
         // GET: Rol/Details/5
         public ActionResult Details(int id)
         {
