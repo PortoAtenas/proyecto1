@@ -1,0 +1,37 @@
+﻿@using proyecto1.Models;
+@model List<ProductoCLS>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td width="10%">@Html.LabelFor(p => Model[0].iidProducto)</td>
+            <td width="20%">@Html.LabelFor(p => Model[0].nombreP)</td>
+            <td width="10%">@Html.LabelFor(p => Model[0].precio) </td>
+            <td width="10%">@Html.LabelFor(p => Model[0].coste) </td>
+            <td width="30%">@Html.LabelFor(p => Model[0].descripcion)</td>
+            <td width="10%">@Html.LabelFor(p => Model[0].cantidad)</td>
+            <td width="10%">@Html.LabelFor(p => Model[0].iidState)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.iidProducto </td>
+                <td>@item.nombreP </td>
+                <td>@item.precio </td>
+                <td>@item.coste  </td>
+                <td>@item.descripcion</td>
+                <td>@item.cantidad</td>
+                <td>@item.iidState</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
