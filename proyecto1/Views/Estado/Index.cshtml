@@ -1,0 +1,29 @@
+﻿@using proyecto1.Models;
+@model List<EstadoCLS>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado de Estados del producto</h2>
+@Html.ActionLink("Agregar", "Agregar", "Estado", null, new { @class = "btn btn-primary" })
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td width="10%">@Html.LabelFor(p => Model[0].iidState)</td>
+            <td width="20%">@Html.LabelFor(p => Model[0].nombreS)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.iidState </td>
+                <td>@item.nombreS </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+

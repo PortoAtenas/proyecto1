@@ -1,0 +1,29 @@
+﻿@using proyecto1.Models
+@model EstadoCLS
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar Estado</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Agregar", "Estado", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(p => p.nombreS)
+                @Html.TextBoxFor(p => p.nombreS, new { @class = "form-control" })
+                @Html.ValidationMessage("nombreS", new { @class = "text-danger" })
+            </div>
+
+            <br />
+
+            <div style="margin:auto">
+                <input type="submit" class="btn btn-primary" value="Guardar" />
+            </div>
+        }
+    </div>
+</div>
+
+
