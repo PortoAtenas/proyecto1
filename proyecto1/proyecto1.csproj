@@ -186,6 +186,7 @@
     <Content Include="Views\Producto\Agregar.cshtml" />
     <Content Include="Views\Estado\Index.cshtml" />
     <Content Include="Views\Estado\Agregar.cshtml" />
+    <Content Include="Views\Cliente\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

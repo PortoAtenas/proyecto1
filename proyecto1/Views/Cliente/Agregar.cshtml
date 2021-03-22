@@ -1,0 +1,57 @@
+﻿@using proyecto1.Models
+@model ClienteCLS
+
+@{
+    ViewBag.Title = "Agregar";
+}
+
+<h2>Agregar Rol</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("Agregar", "Cliente", FormMethod.Post))
+        {
+            <div>
+                @Html.LabelFor(p => p.icedula)
+                @Html.TextBoxFor(p => p.icedula, new { @class = "form-control" })
+                @Html.ValidationMessage("icedula", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.inombreC)
+                @Html.TextBoxFor(p => p.inombreC, new { @class = "form-control" })
+                @Html.ValidationMessage("inombreC", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.iapellidosC)
+                @Html.TextBoxFor(p => p.iapellidosC, new { @class = "form-control" })
+                @Html.ValidationMessage("iapellidosC", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.idireccion)
+                @Html.TextBoxFor(p => p.idireccion, new { @class = "form-control" })
+                @Html.ValidationMessage("idireccion", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.icelular)
+                @Html.TextBoxFor(p => p.icelular, new { @class = "form-control" })
+                @Html.ValidationMessage("icelular", new { @class = "text-danger" })
+            </div>
+
+            <div>
+                @Html.LabelFor(p => p.itelefono)
+                @Html.TextBoxFor(p => p.itelefono, new { @class = "form-control" })
+                @Html.ValidationMessage("itelefono", new { @class = "text-danger" })
+            </div>
+            <br />
+
+            <div style="margin:auto">
+                <input type="submit" class="btn btn-primary" value="Guardar" />
+            </div>
+        }
+    </div>
+</div>
+

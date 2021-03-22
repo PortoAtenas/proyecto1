@@ -5,15 +5,15 @@
 }
 
 <h2>Index</h2>
-
+@Html.ActionLink("Agregar", "Agregar", "Cliente", null, new { @class = "btn btn-primary" })
 <table class="table table-bordered table-hover">
     <thead>
         <tr>
             <td width="10%">@Html.LabelFor(p => Model[0].icedula)</td>
             <td width="20%">@Html.LabelFor(p => Model[0].inombreC)</td>
             <td width="10%">@Html.LabelFor(p => Model[0].iapellidosC) </td>
-            <td width="10%">@Html.LabelFor(p => Model[0].idireccion) </td>
-            <td width="30%">@Html.LabelFor(p => Model[0].icelular)</td>
+            <td width="30%">@Html.LabelFor(p => Model[0].idireccion) </td>
+            <td width="10%">@Html.LabelFor(p => Model[0].icelular)</td>
             <td width="10%">@Html.LabelFor(p => Model[0].itelefono)</td>
         </tr>
     </thead>

@@ -32,6 +32,38 @@ namespace proyecto1.Controllers
             return View(listaCliente);
         }
 
+        public ActionResult Agregar()
+        {
+            return View();
+        }
+
+        
+        [HttpPost]
+        public ActionResult Agregar(ClienteCLS oClienteCLS) 
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(oClienteCLS);
+            }
+            else 
+            {
+                using (var bd = new proyectoSEntities1())
+                {
+                    Cliente oCliente = new Cliente();
+                    oCliente.cedula = oClienteCLS.icedula;
+                    oCliente.nombreC = oClienteCLS.inombreC;
+                    oCliente.apellidos = oClienteCLS.iapellidosC;
+                    oCliente.direccion = oClienteCLS.idireccion;
+                    oCliente.celular = oClienteCLS.icelular;
+                    oCliente.telefono = oClienteCLS.itelefono;
+                    bd.Cliente.Add(oCliente);
+                    bd.SaveChanges();
+                }
+            }
+
+            return RedirectToAction("Index");
+        }
+
         // GET: Cliente/Details/5
         public ActionResult Details(int id)
         {
