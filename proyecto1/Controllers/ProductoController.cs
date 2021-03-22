@@ -29,5 +29,37 @@ namespace proyecto1.Controllers
             }
                 return View(listaProducto);
         }
+
+        public ActionResult Agregar() {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Agregar(ProductoCLS oProductoCLS) {
+            if (!ModelState.IsValid)
+            {
+                return View(oProductoCLS);
+            }
+            else {
+                using (var bd = new proyectoSEntities1())
+                {
+                    Producto oProducto = new Producto();
+                    oProducto.nombresP = oProductoCLS.nombreP;
+                    oProducto.precio = (decimal?)oProductoCLS.precio;
+                    oProducto.coste = (decimal?)oProductoCLS.coste;
+                    oProducto.descripcion = oProductoCLS.descripcion;
+                    oProducto.cantidad = (int)oProductoCLS.cantidad;
+                    oProducto.idState = (int)oProductoCLS.iidState;
+                    bd.Producto.Add(oProducto);
+                    bd.SaveChanges();
+                }
+            }
+            return RedirectToAction("Index");
+        }
+
+
+
+
+
     }
 }

@@ -142,6 +142,7 @@
     <Compile Include="Models\detalleF.cs">
       <DependentUpon>BDProyecto.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EstadoCLS.cs" />
     <Compile Include="Models\Pedido.cs">
       <DependentUpon>BDProyecto.tt</DependentUpon>
     </Compile>
@@ -181,6 +182,7 @@
     <Content Include="Views\Producto\Index.cshtml" />
     <Content Include="Views\Cliente\Index.cshtml" />
     <Content Include="Views\Rol\Agregar.cshtml" />
+    <Content Include="Views\Producto\Agregar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
