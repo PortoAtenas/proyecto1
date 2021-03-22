@@ -8,9 +8,13 @@ namespace proyecto1.Models
 {
     public class ProductoCLS
     {
+        
         [Display(Name = "Id Producto")]
+       
         public int iidProducto { get; set; }
 
+        [Required]
+        [StringLength(50,ErrorMessage ="No se admiten mas de 50 caracteres")]
         [Display(Name = "Nombre Producto")]
         public string nombreP { get; set; }
 
@@ -22,6 +26,8 @@ namespace proyecto1.Models
 
 
         [Display(Name ="Descripcion")]
+        [Required]
+        [StringLength(50, ErrorMessage ="No se admiten mas de 50 caracteres")]
         public string descripcion { get; set; }
 
 
@@ -29,8 +35,8 @@ namespace proyecto1.Models
         public int cantidad { get; set; } 
 
 
-        [Display(Name ="Estado del producto")]
-        public int iidState { get; set; }
+        [Display(Name ="Estado del producto: 1.Activo 2.Inactivo 3.Eliminado")]
+        public Nullable<int> iidState { get; set; }
 
     }
 }
